@@ -23,4 +23,4 @@ These are added up so we have the total set of columns in scope. As we also need
 Based on the subsetting vector we create the tidy dataset with only 68 columns.
 
 The aggregate function enables us to get the average on subject/activity level, ending up with a tidy dataset of 68 columns 
-and (6 * 30) 180 columns.
+and (6 * 30)= 180 rows.
