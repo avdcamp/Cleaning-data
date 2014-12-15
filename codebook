@@ -1,0 +1,16 @@
+This codebook holds information on the cleaning data assignment.
+
+The tidy dataset is created out of a dataset containing 564 columns/variables and 10299 observations.
+None of these variables contain NA's, meaning there is no missing data.
+
+subjectID: integer representing the person of which the data were collected (censored)
+activityId: integer representing the activity (categorical)
+activityDesc: description of the activity (categorical)
+
+The remaining 561 variables are all continuous, having values between -1 and 1, stored in scientific notation 
+(e.g. 3.7713126e-001). The units for these variables is unknown to me.
+
+For the analysis we summarized the data on subject ID / activity level, which leads to (30 subjects * 6 activities) 180 observations.
+When summarizing, we take the average of all variables on mean and standard deviation.
+
+
