@@ -17,10 +17,17 @@ This ends up with 2 dataframes with 564 columns.
 Now we merge them together using rbind into 1 big dataset.
 
 In order to subset only the mean() and std() columns we create 2 vectors that hold the matching column names.
-These are added up so we have the total set of columns in scope. As we also need the 2nd and 3rd column
-(which are the subject ID and the activity description) we set those to true manually.
+There are also other columns that have 'mean' in their description, but in my interpretation we strictly
+need the mean() and std() column names as part of our tidy dataset.
+
+These logical vectors are summarized so we have the total set of columns that are in scope. As we also need the 2nd and 3rd column (which are the subject ID and the activity description) we set those to true manually.
 
 Based on the subsetting vector we create the tidy dataset with only 68 columns.
 
 The aggregate function enables us to get the average on subject/activity level, ending up with a tidy dataset of 68 columns 
-and (6 * 30)= 180 rows.
+and (6 * 30)= 180 rows. As the aggregate function introduces 2 new columns in the dataset with rather technical names,
+I remove the original columns for activity description and subject ID and rename the ones that are generated using the
+aggregate function. 
+
+Finally we write the tidySet dataframe into a file.
+
